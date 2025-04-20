@@ -18,4 +18,5 @@ for fd in `find $1 -type f` ; do
     lineCnt=$((lineCnt + c))
 done
 
+
 echo "The number of files are $fileCnt and the number of matching lines are $lineCnt"
