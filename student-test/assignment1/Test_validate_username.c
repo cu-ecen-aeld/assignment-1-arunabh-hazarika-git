@@ -1,7 +1,6 @@
 #include "unity.h"
 #include <stdbool.h>
 #include <stdlib.h>
-#include <string.h>
 #include "../../examples/autotest-validate/autotest-validate.h"
 #include "../../assignment-autotest/test/assignment1/username-from-conf-file.h"
 
@@ -21,5 +20,5 @@ void test_validate_my_username()
      */
   const char* un1 = my_username();
   const char* un2 = malloc_username_from_conf_file();
-  TEST_ASSERT_TRUE_MESSAGE(strcmp(un1, un2) == 0, "Test failed");
+  TEST_ASSERT_EQUAL_STRING_MESSAGE(un1, un2, "Test failed");
 }
